@@ -1,0 +1,9 @@
+{
+    "Format": "2.7.0",
+    "Changes": [
+        {
+            "Action": "include",
+            "FromFile": "Data/Auri.json, Data/Disthen.json"
+        }
+    ]
+}

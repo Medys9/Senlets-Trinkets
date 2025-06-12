@@ -1,0 +1,17 @@
+{
+    "Name": "Senlets Trinkets",
+    "Author": "Medys",
+    "Version": "1.0.0",
+    "Description": "Prying this work.",
+    "UniqueID": "Medys.SenletsTrinkets",
+    "UpdateKeys": [], 
+    "ContentPackFor": {
+        "UniqueID": "Pathoschild.ContentPatcher"
+    },
+    "Dependencies": [
+      {
+        "UniqueID": "mushymato.TrinketTinker",
+        "MinimumVersion": "1.5.8"
+      }
+    ]
+}

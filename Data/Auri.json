@@ -1,0 +1,55 @@
+{
+    "$schema": "https://smapi.io/schemas/content-patcher.json",
+    "Changes": [
+        {
+            "LogName": "Auri: Sprites",
+            "Action": "Load",
+            "Target": "Mods/{{ModId}}/Auri, Mods/{{ModId}}/Auri_Trinket",
+            "FromFile": "assets/Auri/{{TargetWithoutPath}}.png"
+        },
+         // Edit Data/Trinkets 
+        {
+            "LogName": "Auri: Trinkets",
+            "Action": "EditData",
+            "Target": "Data/Trinkets",
+            "Entries": {
+                "{{ModId}}_Auri": {
+                    "Id": "{{ModId}}_Auri",
+                    "DisplayName": "{{i18n:AuriCookie.DisplayName}}",
+                    "Description": "{{i18n:AuriCookie.Description}}",
+                    "Texture": "Mods/{{ModId}}/Auri_Trinket",
+                },
+            }
+        },
+        {
+            "LogName": "Auri: Tinker",
+            "Action": "EditData",
+            "Target": "mushymato.TrinketTinker/Tinker",
+            "Entries": {
+                "{{ModId}}_Auri": {
+                    "Variants": [
+
+                        {
+                            "Texture": "Mods/{{ModId}}/Auri",
+                            "Width": 16,
+                            "Height": 32,
+                            //I can add some portraits here maybe, ehhehe, and also a name too, this thing is magical
+                        },
+                        ],
+                    "Motion": {
+                        "MotionClass": "Lerp",
+                        "DirectionMode": "DRUL",
+                        //frameleght maybe?? problema para yo del futuro, or maybe eliminar because the default is already 16?
+                        "frameleght": 16,
+                        // yeah this one feels unnecesary
+                        "Archors": null,
+                        //if this doesnt work it will be tima to ask for help
+                        //if it does work, i may start doing portraits (totally ignoring the i18n i have to do)
+                        //....if doesnt work for the fucking name thing i will scream
+                        "interval": 200,
+                    },
+                },
+            }
+        },
+    ]
+}

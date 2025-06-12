@@ -1,0 +1,8 @@
+{
+    "$schema": "https://smapi.io/schemas/i18n.json",
+    //trinkets
+    "Auricookie.DisplayName": "Cookie",
+    "AuriCookie.Description": "A teddy bear shaped cookie",
+    "DisthenBaby.DisplayName": "Disthen",
+    "DisthenBaby.Description": "Cutie potato"
+}

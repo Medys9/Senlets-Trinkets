@@ -1,0 +1,49 @@
+{
+    "$schema": "https://smapi.io/schemas/content-patcher.json",
+    "Changes": [
+        {
+            "LogName": "Disthen: Sprites",
+            "Action": "Load",
+            "Target": "Mods/{{ModId}}/Disthen, Mods/{{ModId}}/Disthen_Trinket",
+            "FromFile": "assets/Disthen/{{TargetWithoutPath}}.png"
+        },
+         // Edit Data/Trinkets 
+        {
+            "LogName": "Disthen: Trinkets",
+            "Action": "EditData",
+            "Target": "Data/Trinkets",
+            "Entries": {
+                "{{ModId}}_Disthen": {
+                    "Id": "{{ModId}}_Disthen",
+                    "DisplayName": "{{i18n:DisthenBaby.DisplayName}}",
+                    "Description": "{{i18n:DisthenBaby.Description}}",
+                    "Texture": "Mods/{{ModId}}/Disthen_Trinket",
+                },
+            }
+        },
+        {
+            "LogName": "Disthen: Tinker",
+            "Action": "EditData",
+            "Target": "mushymato.TrinketTinker/Tinker",
+            "Entries": {
+                "{{ModId}}_Disthen": {
+                    "Variants": [
+                        {
+                            "Texture": "Mods/{{ModId}}/Disthen",
+                            "Width": 16,
+                            "Height": 32,
+                            //portraits here 
+                        },
+                        ],
+                    "Motion": {
+                        "MotionClass": "Lerp",
+                        "DirectionMode": "DRUL",
+                        "frameleght": 16,
+                        "Archors": null,
+                        "interval": 200,
+                    },
+                },
+            }
+        },
+    ]
+}
