@@ -16,7 +16,7 @@
                     "Id": "{{ModId}}_Psique",
                     "DisplayName": "{{i18n:PsiqueGhost.DisplayName}}",
                     "Description": "{{i18n:PsiqueGhost.Description}}",
-                    "Texture": "Mods/{{ModId/Psique_Trinket}}",
+                    "Texture": "Mods/{{ModId}}/Psique_Trinket",
                 },
             }
         },
