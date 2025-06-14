@@ -1,0 +1,48 @@
+{
+    "$schema": "https://smapi.io/schemas/content-patcher.json",
+    "Changes": [
+        {
+            "LogName": "Psique: Sprites",
+            "Action": "Load",
+            "Target": "Mods/{{ModId}}/Psique, Mods/{{ModId}}/Psique_Trinket",
+            "FromFile": "assets/Psique/{{TargetWithoutPath}}.png",
+        },
+        {
+            "LogName": "Psique: Trinkets",
+            "Action": "EditData",
+            "Target": "Data/Trinkets",
+            "Entries": {
+                "{{ModId}}_Psique": {
+                    "Id": "{{ModId}}_Psique",
+                    "DisplayName": "{{i18n:PsiqueGhost.DisplayName}}",
+                    "Description": "{{i18n:PsiqueGhost.Description}}",
+                    "Texture": "Mods/{{ModId/Psique_Trinket}}",
+                },
+            }
+        },
+        {
+            "LogName": "Psique: Tinker",
+            "Action": "EditData",
+            "Target": "mushymato.TrinketTinker/Tinker",
+            "Entries": {
+                "{{ModId}}_Psique": {
+                    "Variants": [
+                        {
+                            "Texture": "Mods/{{ModId}}/Psique",
+                            "Width": 16,
+                            "Height": 32,
+                            //mark for portraits
+                        },
+                    ],
+                    "Motion": {
+                        "MotionClass": "Lerp",
+                        "DirectionMode": "DRUL",
+                        "frameleght": 16,
+                        "Archors": null,
+                        "interval": 200,
+                    },
+                },
+            }
+        },
+    ]
+}
