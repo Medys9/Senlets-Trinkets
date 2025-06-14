@@ -34,14 +34,29 @@
                             "Height": 32,
                             //portraits here 
                         },
-                        ],
+                    ],
                     "Motion": {
                         "MotionClass": "Lerp",
                         "DirectionMode": "DRUL",
                         "frameleght": 16,
-                        "Archors": null,
+                        "Archors": [
+                            {
+                                "Mode": "FarmAnimal",
+                                "Range": 300,
+                            },
+                        ],
+
                         "interval": 200,
                     },
+                    "Abilities": [
+                        [
+                            {
+                                "AbilityClass": "PetFarmAnimal",
+                                "Proc": "Timer",
+                                "ProcTimer": 1000
+                            },
+                        ],
+                    ]
                 },
             }
         },
