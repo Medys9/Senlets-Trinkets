@@ -42,11 +42,49 @@
                         //frameleght maybe?? problema para yo del futuro, or maybe eliminar because the default is already 16?
                         "frameleght": 16,
                         // yeah this one feels unnecesary
-                        "Archors": null,
-                        //if this doesnt work it will be tima to ask for help
-                        //if it does work, i may start doing portraits (totally ignoring the i18n i have to do)
-                        //....if doesnt work for the fucking name thing i will scream
+                        "Archors": [
+                            {
+                                "Mode": "Forage",
+                                "Range": 320
+                            },
+                            {
+                                "Mode": "Shakeable",
+                                "Range": 320,
+                            },
+                        ],
+                        //here I add stuff like foraging??
                         "interval": 200,
+                        //I fuckep up this here, future me from probably 20 minutes
+                        // add the ability first so this can hopefully work, and also fix the
+                    },
+                    "abilities": [
+                        [
+                            {
+                                "AbilityClass": "HarvestForage",
+                                "Proc": "Timer",
+                                "ProcTimer": 300,
+                                "ProcSound": "harvest",
+                                //I can set an animation here with ProcTAS???
+                                "Args":{
+                                    "Range": 4,
+                                    "HarvestTo": "TinkerInventory",
+                                },
+                            },
+                            {
+                                "AbilityClass": "HarvestShakeable",
+                                "Proc": "Timer",
+                                "ProcTimer": 300,
+                                "ProcSound": "harvest",
+                                "Args": {
+                                    "Range": 3,
+                                    "HarvestTo": "TinkerInventory",
+                                    "Filters": "Tree, FruitTree",
+                                },
+                            },
+                        ],
+                    ],
+                    "Inventory": {
+                        "Capacity": 12,
                     },
                 },
             }
