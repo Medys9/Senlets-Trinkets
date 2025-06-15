@@ -39,6 +39,7 @@
                         "DirectionMode": "DRUL",
                         "frameleght": 16,
                         "Archors": null,
+                        "AlwaysMoving": "True",
                         "interval": 200,
                     },
                 },
