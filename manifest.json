@@ -11,7 +11,7 @@
     "Dependencies": [
       {
         "UniqueID": "mushymato.TrinketTinker",
-        "MinimumVersion": "1.5.8"
+        "MinimumVersion": "1.6.0"
       }
     ]
 }

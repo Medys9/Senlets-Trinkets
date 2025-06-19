@@ -40,6 +40,7 @@
                         "DirectionMode": "DRUL",
                         "frameleght": 16,
                         "Archors": [
+                            //Here I add all the abilities
                             {
                                 "Mode": "FarmAnimal",
                                 "Range": 300,
@@ -49,11 +50,12 @@
                         "interval": 200,
                     },
                     "Abilities": [
+                        //Here I add the details of each abilities
                         [
                             {
                                 "AbilityClass": "PetFarmAnimal",
                                 "Proc": "Timer",
-                                "ProcTimer": 1000
+                                "ProcTimer": 1000,
                             },
                         ],
                     ]

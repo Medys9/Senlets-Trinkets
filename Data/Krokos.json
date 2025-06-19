@@ -1,0 +1,48 @@
+{
+    "$schema": "https://smapi.io/schemas/content-patcher.json",
+    "Changes": [
+        {
+            "LogName": "Krokos: Sprites",
+            "Action": "Load",
+            "Target": "Mods/{{ModId}}/Krokos, Mods/{{ModId}}/Krokos_Trinket",
+            "FromFile": "assets/Krokos/{{TargetWithoutPath}}.png",
+        },
+        {
+            "LogName": "Krokos: Trinkets",
+            "Action": "EditData",
+            "Target": "Data/Trinkets",
+            "Entries": {
+                "{{ModId}}_Krokos": {
+                    "Id": "{{ModId}}_Krokos",
+                    "DisplayName": "{{i18n:KrokosFlower.DisplayName}}",
+                    "Description": "{{i18n:KrokosFlower.Description}}",
+                    "Texture": "Mods/{{ModId}}/Krokos_Trinket",
+                },
+            }
+        },
+        {
+            "LogName": "Krokos: Tinker",
+            "Action": "EditData",
+            "Target": "mushymato.TrinketTinker/Tinker",
+            "Entries": {
+                "{{ModId}}_Krokos": {
+                    "Variants": [
+                        {
+                            "Texture": "Mods/{{ModId}}/Krokos",
+                            "Width": 16,
+                            "Height": 32,
+                            //mark for portraits
+                        },
+                    ],
+                    "Motion": {
+                        "MotionClass": "Lerp",
+                        "DirectionMode": "DRUL",
+                        "frameleght": 16,
+                        "Archors": null,
+                        "interval": 200,
+                    },
+                },
+            }
+        },
+    ]
+}

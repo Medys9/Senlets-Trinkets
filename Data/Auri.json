@@ -21,6 +21,7 @@
                 },
             }
         },
+        // All the stuff the trinket can do
         {
             "LogName": "Auri: Tinker",
             "Action": "EditData",

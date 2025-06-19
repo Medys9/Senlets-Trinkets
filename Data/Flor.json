@@ -1,0 +1,48 @@
+{
+    "$schema": "https://smapi.io/schemas/content-patcher.json",
+    "Changes": [
+        {
+            "LogName": "Flor: Sprites",
+            "Action": "Load",
+            "Target": "Mods/{{ModId}}/Flor, Mods/{{ModId}}/Flor_Trinket",
+            "FromFile": "assets/Flor/{{TargetWithoutPath}}.png",
+        },
+        {
+            "LogName": "Flor: Trinkets",
+            "Action": "EditData",
+            "Target": "Data/Trinkets",
+            "Entries": {
+                "{{ModId}}_Flor": {
+                    "Id": "{{ModId}}_Flor",
+                    "DisplayName": "{{i18n:FlorBird.DisplayName}}",
+                    "Description": "{{i18n:FlorBird.Description}}",
+                    "Texture": "Mods/{{ModId}}/Flor_Trinket",
+                },
+            }
+        },
+        {
+            "LogName": "Flor: Tinker",
+            "Action": "EditData",
+            "Target": "mushymato.TrinketTinker/Tinker",
+            "Entries": {
+                "{{ModId}}_Flor": {
+                    "Variants": [
+                        {
+                            "Texture": "Mods/{{ModId}}/Flor",
+                            "Width": 16,
+                            "Height": 32,
+                            //mark for portraits
+                        },
+                    ],
+                    "Motion": {
+                        "MotionClass": "Lerp",
+                        "DirectionMode": "DRUL",
+                        "frameleght": 16,
+                        "Archors": null,
+                        "interval": 200,
+                    },
+                },
+            }
+        },
+    ]
+}

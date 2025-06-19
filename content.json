@@ -3,7 +3,7 @@
     "Changes": [
         {
             "Action": "include",
-            "FromFile": "Data/Auri.json, Data/Disthen.json, Data/Psique.json"
+            "FromFile": "Data/Auri.json, Data/Disthen.json, Data/Psique.json, Data/Krokos.json, Data/Flor.json"
         }
     ]
 }
