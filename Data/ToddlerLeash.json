@@ -1,0 +1,46 @@
+{
+    "$schema": "https://smapi.io/schemas/content-patcher.json",
+    "Changes": [
+        {
+            "LogName": "ToddlerLeash: Trinket",
+            "Action": "Load",
+            "Target": "Mods/{{ModId}}/ToddlerLeash_Trinket",
+            "FromFile": "assets/ToodlerLeash/{{TargetWithoutPath}}.png"
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Trinkets",
+            "Entries": {
+                "{{ModId}}_ToddlerLeash": {
+                    "Id": "{{ModId}}_ToddlerLeash",
+                    "DisplayName": "{{i18n:ToddlerLeash.DisplayName}}",
+                    "Description": "{{i18n:ToddlerLeash.Description}}",
+                    "Texture": "Mods/{{ModId}}/ToddlerLeash_Trinket",
+                    "SheetIndex": 0,
+                    "DropsNaturally": false,
+                    "CanBeReforged": false
+                },
+            }
+        },
+        {
+            "LogName": "ToddlerLeash: Tinker",
+            "Action": "EditData",
+            "Target": "mushymato.TrinketTinker/Tinker",
+            "Entries": {
+                "{{ModId}}_ToddlerLeash": {
+                    "Abilities": [
+                        [
+                            {
+                                "AbilityClass": "EquipTrinket",
+                                "Proc": "Always"
+                            },
+                        ]
+                    ],
+                    "Inventory": {
+                        "Capacity": 5
+                    }
+                },
+            }
+        },
+    ]
+}
